@@ -1,0 +1,18 @@
+[package]
+name = "laso-hackrf-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+hackrf = ["futuresdr/soapy"]
+
+[dependencies]
+fsdr-blocks = "0.1.0"
+futuredsp = "0.0.6"
+futuresdr = { version = "0.0.37", features = ["seify"] }
+
+[patch.crates-io]
+futuresdr = { path = "../FutureSDR" }
+futuredsp = { path = "../FutureSDR/crates/futuredsp" }
